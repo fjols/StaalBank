@@ -1,0 +1,7 @@
+Player Name: Charlie
+Character Name: Bertrand van Staal
+Race: Hill Dwarf
+Class: Fighter
+Height(cm): 140
+Weight(lbs): 170
+Inventory: 
