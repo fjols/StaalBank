@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace StaalBank
 {
@@ -18,6 +19,42 @@ namespace StaalBank
         {
             InitializeComponent();
         }
+
+        public TextBox GetPlayerName()
+        {
+            return txtPlayerName;
+        }
+
+        public TextBox GetCharacterName()
+        {
+            return txtCharacterName;
+        }
+
+        public TextBox GetRace()
+        {
+            return txtRace;
+        }
+
+        public TextBox GetClass()
+        {
+            return txtClass;
+        }
+
+        public TextBox GetHeight()
+        {
+            return txtHeight;
+        }
+
+        public TextBox GetWeight()
+        {
+            return txtWeight;
+        }
+
+        public TextBox GetInventory()
+        {
+            return txtInventory;
+        }
+
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
@@ -36,8 +73,50 @@ namespace StaalBank
                   m_sCharacterInfo.Add("Inventory: " + inventoryLines[i]); // Add the line to the list.
             }
 
-            file.FileWriting(m_sCharacterInfo); // Write the list to the file.
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            Stream stream;
+            string path;
 
+            if (openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                if ((stream = openFileDialog.OpenFile()) != null)
+                {
+                    path = openFileDialog.FileName; // The file write the text to.
+                    file.FileWriting(m_sCharacterInfo, path); // Write the list to the file.
+                }
+                stream.Close();
+                stream.Dispose();
+            }
+        }
+        /*
+        public string GetFilePath()
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            Stream stream;
+
+            if (openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                if ((stream = openFileDialog.OpenFile()) != null)
+                {
+                    string path = openFileDialog.FileName; // The file write the text to.
+                    return path;
+                }
+                stream.Close();
+                stream.Dispose();
+            }
+            return "error";
+        }
+        */
+        private void btnLoadFileForm_Click(object sender, EventArgs e)
+        {
+            Form2 fileForm = new Form2();
+            fileForm.Show();
+        }
+
+        private void btnLoadFile_Click(object sender, EventArgs e)
+        {
+            File file = new File();
+            file.LoadFile(this);
         }
     }
 }

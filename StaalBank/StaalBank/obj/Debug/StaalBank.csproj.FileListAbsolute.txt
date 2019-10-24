@@ -8,3 +8,15 @@ C:\Users\Charlie.CHARLIE-SAN\Desktop\Code\StaalBank_\StaalBank\StaalBank\obj\Deb
 C:\Users\Charlie.CHARLIE-SAN\Desktop\Code\StaalBank_\StaalBank\StaalBank\obj\Debug\StaalBank.csproj.CoreCompileInputs.cache
 C:\Users\Charlie.CHARLIE-SAN\Desktop\Code\StaalBank_\StaalBank\StaalBank\obj\Debug\StaalBank.exe
 C:\Users\Charlie.CHARLIE-SAN\Desktop\Code\StaalBank_\StaalBank\StaalBank\obj\Debug\StaalBank.pdb
+C:\Users\Charlie.CHARLIE-SAN\Desktop\Code\staalBankProject\StaalBank\StaalBank\bin\Debug\StaalBank.exe.config
+C:\Users\Charlie.CHARLIE-SAN\Desktop\Code\staalBankProject\StaalBank\StaalBank\bin\Debug\StaalBank.exe
+C:\Users\Charlie.CHARLIE-SAN\Desktop\Code\staalBankProject\StaalBank\StaalBank\bin\Debug\StaalBank.pdb
+C:\Users\Charlie.CHARLIE-SAN\Desktop\Code\staalBankProject\StaalBank\StaalBank\obj\Debug\StaalBank.csprojAssemblyReference.cache
+C:\Users\Charlie.CHARLIE-SAN\Desktop\Code\staalBankProject\StaalBank\StaalBank\obj\Debug\StaalBank.Form1.resources
+C:\Users\Charlie.CHARLIE-SAN\Desktop\Code\staalBankProject\StaalBank\StaalBank\obj\Debug\StaalBank.Properties.Resources.resources
+C:\Users\Charlie.CHARLIE-SAN\Desktop\Code\staalBankProject\StaalBank\StaalBank\obj\Debug\StaalBank.csproj.GenerateResource.cache
+C:\Users\Charlie.CHARLIE-SAN\Desktop\Code\staalBankProject\StaalBank\StaalBank\obj\Debug\StaalBank.csproj.CoreCompileInputs.cache
+C:\Users\Charlie.CHARLIE-SAN\Desktop\Code\staalBankProject\StaalBank\StaalBank\obj\Debug\StaalBank.exe
+C:\Users\Charlie.CHARLIE-SAN\Desktop\Code\staalBankProject\StaalBank\StaalBank\obj\Debug\StaalBank.pdb
+C:\Users\Charlie.CHARLIE-SAN\Desktop\Code\staalBankProject\StaalBank\StaalBank\obj\Debug\StaalBank.Form2.resources
+C:\Users\Charlie.CHARLIE-SAN\Desktop\Code\staalBankProject\StaalBank\StaalBank\obj\Debug\StaalBank.Form3.resources

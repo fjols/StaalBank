@@ -1,9 +1,9 @@
-Player Name: Charlie
-Character Name: Bertrand van Staal
-Race: Hill Dwarf
-Class: Fighter
-Height(cm): 140
-Weight(lbs): 170
-Inventory: Sword
-Inventory: Shield
-Inventory: Potions
+Player Name: Thomas
+Character Name: Cassus
+Race: Half Elf
+Class: Cleric
+Height(cm): 230
+Weight(lbs): 400
+Inventory: Half a pound of meth
+Inventory: Burger king burger
+Inventory: Foot Lettuce

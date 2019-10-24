@@ -43,6 +43,10 @@
             this.lblInventory = new System.Windows.Forms.Label();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.txtInventory = new System.Windows.Forms.TextBox();
+            this.lblPrompt = new System.Windows.Forms.Label();
+            this.btnLoadFileForm = new System.Windows.Forms.Button();
+            this.lblLoadFile = new System.Windows.Forms.Label();
+            this.btnLoadFile = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblPlayerName
@@ -168,11 +172,53 @@
             this.txtInventory.Size = new System.Drawing.Size(634, 187);
             this.txtInventory.TabIndex = 15;
             // 
+            // lblPrompt
+            // 
+            this.lblPrompt.AutoSize = true;
+            this.lblPrompt.Location = new System.Drawing.Point(13, 456);
+            this.lblPrompt.Name = "lblPrompt";
+            this.lblPrompt.Size = new System.Drawing.Size(109, 13);
+            this.lblPrompt.TabIndex = 16;
+            this.lblPrompt.Text = "Need to create a file?";
+            // 
+            // btnLoadFileForm
+            // 
+            this.btnLoadFileForm.Location = new System.Drawing.Point(128, 451);
+            this.btnLoadFileForm.Name = "btnLoadFileForm";
+            this.btnLoadFileForm.Size = new System.Drawing.Size(75, 23);
+            this.btnLoadFileForm.TabIndex = 17;
+            this.btnLoadFileForm.Text = "Click here!";
+            this.btnLoadFileForm.UseVisualStyleBackColor = true;
+            this.btnLoadFileForm.Click += new System.EventHandler(this.btnLoadFileForm_Click);
+            // 
+            // lblLoadFile
+            // 
+            this.lblLoadFile.AutoSize = true;
+            this.lblLoadFile.Location = new System.Drawing.Point(215, 456);
+            this.lblLoadFile.Name = "lblLoadFile";
+            this.lblLoadFile.Size = new System.Drawing.Size(99, 13);
+            this.lblLoadFile.TabIndex = 18;
+            this.lblLoadFile.Text = "Need to load a file?";
+            // 
+            // btnLoadFile
+            // 
+            this.btnLoadFile.Location = new System.Drawing.Point(330, 451);
+            this.btnLoadFile.Name = "btnLoadFile";
+            this.btnLoadFile.Size = new System.Drawing.Size(75, 23);
+            this.btnLoadFile.TabIndex = 19;
+            this.btnLoadFile.Text = "Click here!";
+            this.btnLoadFile.UseVisualStyleBackColor = true;
+            this.btnLoadFile.Click += new System.EventHandler(this.btnLoadFile_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(665, 481);
+            this.Controls.Add(this.btnLoadFile);
+            this.Controls.Add(this.lblLoadFile);
+            this.Controls.Add(this.btnLoadFileForm);
+            this.Controls.Add(this.lblPrompt);
             this.Controls.Add(this.txtInventory);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.lblInventory);
@@ -198,7 +244,6 @@
         #endregion
 
         private System.Windows.Forms.Label lblPlayerName;
-        private System.Windows.Forms.TextBox txtPlayerName;
         private System.Windows.Forms.Label lblCharacterName;
         private System.Windows.Forms.TextBox txtCharacterName;
         private System.Windows.Forms.Label lblRace;
@@ -212,6 +257,11 @@
         private System.Windows.Forms.Label lblInventory;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.TextBox txtInventory;
+        private System.Windows.Forms.Label lblPrompt;
+        private System.Windows.Forms.Button btnLoadFileForm;
+        private System.Windows.Forms.Label lblLoadFile;
+        private System.Windows.Forms.Button btnLoadFile;
+        public System.Windows.Forms.TextBox txtPlayerName;
     }
 }
 

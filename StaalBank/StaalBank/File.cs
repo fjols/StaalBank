@@ -8,38 +8,47 @@ using System.Windows.Forms;
 
 namespace StaalBank
 {
-    class File
+    public class File
     {
-        File(TextBox fileName)
+        public Form1 mainForm;
+        public File()
         {
-            string sFileName = @"C:\Users\Charlie.CHARLIE-SAN\Desktop\Code\StaalBank_\StaalBank\StaalBank" + fileName;
-            try
-            {
-                if(System.IO.File.Exists(sFileName))
-                {
-                    System.IO.File.Delete(sFileName);
-                }
-                using (FileStream fileStream = System.IO.File.Create(sFileName))
-                {
-                    Byte[] title = new UTF8Encoding(true).GetBytes("CHARACTER FILE"); // Title
-                    fileStream.Write(title, 0, title.Length);
-                    byte[] author = new UTF8Encoding(true).GetBytes("CHARLIE JENKINSON");
-                    fileStream.Write(author, 0, author.Length);
-                }
+        }
 
-                using (StreamReader streamReader = System.IO.File.OpenText(sFileName))
-                {
-                    string s = "";
-                    while((s = streamReader.ReadLine()) != null)
-                    {
-                        // Read text.
-                    }
-                }
-            }
-            catch (Exception Ex)
+        public void CreateFile(string fileName)
+        {
+            StreamWriter file = new StreamWriter(@"C:\Users\Charlie.CHARLIE-SAN\Desktop\Code\staalBankProject\StaalBank\" + fileName + ".txt"); // Create a new file.
+            file.Close();
+        }
+
+        public void LoadFile(Form1 form)
+        {
+            this.mainForm = form;
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            Stream stream;
+
+            if(openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                Console.WriteLine(Ex.ToString());
+
+                if((stream = openFileDialog.OpenFile()) != null)
+                {
+                    string path = openFileDialog.FileName;
+                    string[] l_sFileLines = System.IO.File.ReadAllLines(path); // Get the file to read.
+                    this.mainForm.GetPlayerName().AppendText(l_sFileLines[0].Substring(12));
+                    this.mainForm.GetCharacterName().AppendText(l_sFileLines[1].Substring(16));
+                    this.mainForm.GetRace().AppendText(l_sFileLines[2].Substring(6));
+                    this.mainForm.GetClass().AppendText(l_sFileLines[3].Substring(7));
+                    this.mainForm.GetHeight().AppendText(l_sFileLines[4].Substring(13));
+                    this.mainForm.GetWeight().AppendText(l_sFileLines[5].Substring(13));
+                    for(int i = 6; i < l_sFileLines.Count(); i++)
+                    {
+                        this.mainForm.GetInventory().AppendText(l_sFileLines[i] + Environment.NewLine);
+                    }
+                    
+                    stream.Dispose();
+                }
             }
         }
+
     }
 }
