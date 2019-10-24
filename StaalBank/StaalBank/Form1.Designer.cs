@@ -41,8 +41,8 @@
             this.txtWeight = new System.Windows.Forms.TextBox();
             this.lblWeight = new System.Windows.Forms.Label();
             this.lblInventory = new System.Windows.Forms.Label();
-            this.lstInventory = new System.Windows.Forms.ListBox();
             this.btnSubmit = new System.Windows.Forms.Button();
+            this.txtInventory = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblPlayerName
@@ -60,7 +60,6 @@
             this.txtPlayerName.Name = "txtPlayerName";
             this.txtPlayerName.Size = new System.Drawing.Size(172, 20);
             this.txtPlayerName.TabIndex = 1;
-            this.txtPlayerName.TextChanged += new System.EventHandler(this.txtPlayerName_TextChanged);
             // 
             // lblCharacterName
             // 
@@ -77,7 +76,6 @@
             this.txtCharacterName.Name = "txtCharacterName";
             this.txtCharacterName.Size = new System.Drawing.Size(172, 20);
             this.txtCharacterName.TabIndex = 3;
-            this.txtCharacterName.TextChanged += new System.EventHandler(this.txtCharacterName_TextChanged);
             // 
             // lblRace
             // 
@@ -94,7 +92,6 @@
             this.txtRace.Name = "txtRace";
             this.txtRace.Size = new System.Drawing.Size(130, 20);
             this.txtRace.TabIndex = 5;
-            this.txtRace.TextChanged += new System.EventHandler(this.txtRace_TextChanged);
             // 
             // lblClass
             // 
@@ -111,7 +108,6 @@
             this.txtClass.Name = "txtClass";
             this.txtClass.Size = new System.Drawing.Size(139, 20);
             this.txtClass.TabIndex = 7;
-            this.txtClass.TextChanged += new System.EventHandler(this.txtClass_TextChanged);
             // 
             // lblHeight
             // 
@@ -128,7 +124,6 @@
             this.txtHeight.Name = "txtHeight";
             this.txtHeight.Size = new System.Drawing.Size(68, 20);
             this.txtHeight.TabIndex = 9;
-            this.txtHeight.TextChanged += new System.EventHandler(this.txtHeight_TextChanged);
             // 
             // txtWeight
             // 
@@ -136,7 +131,6 @@
             this.txtWeight.Name = "txtWeight";
             this.txtWeight.Size = new System.Drawing.Size(68, 20);
             this.txtWeight.TabIndex = 11;
-            this.txtWeight.TextChanged += new System.EventHandler(this.txtWeight_TextChanged);
             // 
             // lblWeight
             // 
@@ -156,15 +150,6 @@
             this.lblInventory.TabIndex = 12;
             this.lblInventory.Text = "INVENTORY ITEMS";
             // 
-            // lstInventory
-            // 
-            this.lstInventory.FormattingEnabled = true;
-            this.lstInventory.Location = new System.Drawing.Point(19, 177);
-            this.lstInventory.Name = "lstInventory";
-            this.lstInventory.Size = new System.Drawing.Size(634, 186);
-            this.lstInventory.TabIndex = 13;
-            this.lstInventory.SelectedIndexChanged += new System.EventHandler(this.lstInventory_SelectedIndexChanged);
-            // 
             // btnSubmit
             // 
             this.btnSubmit.Location = new System.Drawing.Point(19, 370);
@@ -175,13 +160,21 @@
             this.btnSubmit.UseVisualStyleBackColor = true;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
+            // txtInventory
+            // 
+            this.txtInventory.Location = new System.Drawing.Point(19, 177);
+            this.txtInventory.Multiline = true;
+            this.txtInventory.Name = "txtInventory";
+            this.txtInventory.Size = new System.Drawing.Size(634, 187);
+            this.txtInventory.TabIndex = 15;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(665, 481);
+            this.Controls.Add(this.txtInventory);
             this.Controls.Add(this.btnSubmit);
-            this.Controls.Add(this.lstInventory);
             this.Controls.Add(this.lblInventory);
             this.Controls.Add(this.txtWeight);
             this.Controls.Add(this.lblWeight);
@@ -196,7 +189,7 @@
             this.Controls.Add(this.txtPlayerName);
             this.Controls.Add(this.lblPlayerName);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "StaalBank";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -217,8 +210,8 @@
         private System.Windows.Forms.TextBox txtWeight;
         private System.Windows.Forms.Label lblWeight;
         private System.Windows.Forms.Label lblInventory;
-        private System.Windows.Forms.ListBox lstInventory;
         private System.Windows.Forms.Button btnSubmit;
+        private System.Windows.Forms.TextBox txtInventory;
     }
 }
 

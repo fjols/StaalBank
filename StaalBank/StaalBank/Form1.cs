@@ -12,61 +12,32 @@ namespace StaalBank
 {
     public partial class Form1 : Form
     {
-        List<string> m_sCharacterInfo = new List<string>();
+        List<string> m_sCharacterInfo = new List<string>(); // Creates a new list.
 
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void txtPlayerName_TextChanged(object sender, EventArgs e)
-        {
-            //m_sCharacterInfo.Add(txtPlayerName.Text);
-        }
-
-        private void txtCharacterName_TextChanged(object sender, EventArgs e)
-        {
-            //m_sCharacterInfo.Add(txtCharacterName.Text);
-        }
-
-        private void txtRace_TextChanged(object sender, EventArgs e)
-        {
-            //m_sCharacterInfo.Add(txtRace.Text);
-        }
-
-        private void txtClass_TextChanged(object sender, EventArgs e)
-        {
-            //m_sCharacterInfo.Add(txtClass.Text);
-        }
-
-        private void txtHeight_TextChanged(object sender, EventArgs e)
-        {
-           // m_sCharacterInfo.Add(txtHeight.Text);
-        }
-
-        private void txtWeight_TextChanged(object sender, EventArgs e)
-        {
-           // m_sCharacterInfo.Add(txtWeight.Text);
-        }
-
-        private void lstInventory_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //m_sCharacterInfo.Add(lstInventory.Text);
-        }
-
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             WriteToFile file = new WriteToFile(); // File object.
 
-            m_sCharacterInfo.Add("Player Name: " + txtPlayerName.Text);
-            m_sCharacterInfo.Add("Character Name: " + txtCharacterName.Text);
-            m_sCharacterInfo.Add("Race: " + txtRace.Text);
-            m_sCharacterInfo.Add("Class: " + txtClass.Text);
-            m_sCharacterInfo.Add("Height(cm): " + txtHeight.Text);
-            m_sCharacterInfo.Add("Weight(lbs): " + txtWeight.Text);
-            m_sCharacterInfo.Add("Inventory: " + lstInventory.Text);
+            m_sCharacterInfo.Add("Player Name: " + txtPlayerName.Text); // Adds a player name to the list.
+            m_sCharacterInfo.Add("Character Name: " + txtCharacterName.Text); // Adds a character name to the list.
+            m_sCharacterInfo.Add("Race: " + txtRace.Text); // Adds the race to the list.
+            m_sCharacterInfo.Add("Class: " + txtClass.Text); // Adds the class to the list.
+            m_sCharacterInfo.Add("Height(cm): " + txtHeight.Text); // Adds the height to the list.
+            m_sCharacterInfo.Add("Weight(lbs): " + txtWeight.Text); // Adds the width to the list.
+            string[] inventoryLines = txtInventory.Text.Split('\n'); // Split each line up in the inventory multiline text box. The lines will be stored in the array.
 
-            file.FileWriting(m_sCharacterInfo);
+            for(int i = 0; i < inventoryLines.Count(); i++) // Iterate through each element in the array, which are the lines of the multiline text box.
+            {
+                  m_sCharacterInfo.Add("Inventory: " + inventoryLines[i]); // Add the line to the list.
+            }
+
+            file.FileWriting(m_sCharacterInfo); // Write the list to the file.
+
         }
     }
 }

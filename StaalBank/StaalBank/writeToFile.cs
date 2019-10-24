@@ -11,15 +11,14 @@ namespace StaalBank
     {
         public void FileWriting(List<string> txtBox)
         {
-            List<string> text = new List<string>(); // Text to use.
-            foreach(string txt in txtBox)
+            List<string> m_sText = new List<string>(); // New list to use.
+
+            foreach(string txt in txtBox) // For every text element in the list.
             {
-                text.Add(txt);
+                m_sText.Add(txt); // Add each element of the given list to this list.
             }
             
-            System.IO.File.WriteAllLines("C:\\Users\\Charlie.CHARLIE-SAN\\Desktop\\Code\\StaalBank_\\StaalBank\\StaalBank\\test.txt", text);
-             
-            
+            System.IO.File.WriteAllLines("C:\\Users\\Charlie.CHARLIE-SAN\\Desktop\\Code\\staalBankProject\\StaalBank\\test.txt", m_sText); // Write everything to the text file.
         }
     }
 }
